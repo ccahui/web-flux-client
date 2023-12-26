@@ -1,0 +1,8 @@
+server:
+  port: 8095
+spring:
+  application:
+    name: product-webflux
+  data:
+    mongodb:
+      uri: ${product_uri:product_webflux}

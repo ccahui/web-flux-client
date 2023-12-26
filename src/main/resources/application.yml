@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: client-webflux
+apis:
+  product:
+    api-url: http://localhost:8090
+    api-key: xyz
