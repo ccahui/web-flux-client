@@ -1,9 +1,10 @@
-package com.example.client.product;
+package com.example.client.service.impl;
 
 import com.example.client.exceptions.NotFoundException;
-import com.example.client.product.api.ApiProductService;
-import com.example.client.product.dtos.Product;
-import com.example.client.product.dtos.ProductCreateDto;
+import com.example.client.api.ApiProductService;
+import com.example.client.dtos.Product;
+import com.example.client.dtos.ProductCreateDto;
+import com.example.client.service.ServiceProduct;
 import com.example.client.utils.CopyProperties;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

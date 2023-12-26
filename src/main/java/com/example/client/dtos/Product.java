@@ -1,4 +1,4 @@
-package com.example.client.product.dtos;
+package com.example.client.dtos;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

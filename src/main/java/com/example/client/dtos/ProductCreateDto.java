@@ -1,6 +1,5 @@
-package com.example.client.product.dtos;
+package com.example.client.dtos;
 
-import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

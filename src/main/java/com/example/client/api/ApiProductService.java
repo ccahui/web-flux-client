@@ -1,13 +1,18 @@
-package com.example.client.product.api;
+package com.example.client.api;
 
-import com.example.client.product.dtos.Product;
-import com.example.client.product.dtos.ProductCreateDto;
+import com.example.client.api.config.ApiProductConfig;
+import com.example.client.dtos.Product;
+import com.example.client.dtos.ProductCreateDto;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+@Service
+@RequiredArgsConstructor
 public class ApiProductService {
 
-
+    private final ApiProductConfig apiProductConfig;
     public Flux<Product> findAll() {
         return null;
     }

@@ -1,8 +1,9 @@
-package com.example.client.product;
+package com.example.client.controller;
 
 
-import com.example.client.product.dtos.Product;
-import com.example.client.product.dtos.ProductCreateDto;
+import com.example.client.dtos.Product;
+import com.example.client.dtos.ProductCreateDto;
+import com.example.client.service.ServiceProduct;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
