@@ -11,7 +11,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping("/api" + ProductController.PRODUCT)
+@RequestMapping("/api/client" + ProductController.PRODUCT)
 @RequiredArgsConstructor
 public class ProductController {
     public static final String PRODUCT = "/products";
