@@ -5,5 +5,5 @@ spring:
     name: client-webflux
 apis:
   product:
-    uri: ${PRODUCT_URI:product_webflux}
-    key: ${PRODUCT_API_KEY:product_webflux_key}
+    apiUrl: ${PRODUCT_URI:product_webflux}
+    apiKey: ${PRODUCT_API_KEY:product_webflux_key}

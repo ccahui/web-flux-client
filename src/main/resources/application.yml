@@ -3,5 +3,5 @@ spring:
     name: client-webflux
 apis:
   product:
-    api-url: http://localhost:8090
-    api-key: xyz
+    apiUrl: http://localhost:8090
+    apiKey: xyz
