@@ -1,0 +1,12 @@
+{
+  "exception": "BadRequestException",
+  "message": "Bad Request, fields Error",
+  "path": "/api/client/products",
+  "fieldsError": [
+    {
+      "name": "name",
+      "rejectValue": "",
+      "message": "no debe estar vacío"
+    }
+  ]
+}

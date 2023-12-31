@@ -1,0 +1,5 @@
+{
+  "exception": "NotFoundException",
+  "message": "Not Found Exception (404). Product id ( 658cad206513575c72a83228a )",
+  "path": "/api/client/products/658cad206513575c72a83228a"
+}

@@ -1,0 +1,12 @@
+{
+  "exception": "WebExchangeBindException",
+  "message": "Bad Request, fields Error",
+  "path": "/api/products",
+  "fieldsError": [
+    {
+      "name": "name",
+      "rejectValue": "",
+      "message": "no debe estar vacío"
+    }
+  ]
+}

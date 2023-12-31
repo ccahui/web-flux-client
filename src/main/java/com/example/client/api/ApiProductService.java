@@ -44,7 +44,6 @@ public class ApiProductService {
                 .retrieve()
                 .onStatus(httpStatusCode -> httpStatusCode.equals(HttpStatus.BAD_REQUEST),
                         response -> {
-
                             return response.bodyToMono(ApiBadRequestResponse.class)
                                     .flatMap(errorResponse->{
                                         throw new BadRequestException(errorResponse);
