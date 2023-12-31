@@ -20,13 +20,14 @@ import reactor.core.publisher.Mono;
 public class ApiProductService {
     private static String notFoundMessage = "Product id ( %s )";
     private final WebClient productWebClient;
+    public static final String API_PRODUCTS = "/api/products";
     public Flux<Product> findAll() {
         return productWebClient
-                .get().uri("/api/products").retrieve()
+                .get().uri(API_PRODUCTS).retrieve()
                 .bodyToFlux(Product.class);
     }
     public Mono<Product> findById(String id) {
-        String uri = String.format("/api/products/%s", id);
+        String uri = API_PRODUCTS+"/"+id;
         return productWebClient
                 .get().uri(uri)
                 .retrieve()
@@ -37,9 +38,8 @@ public class ApiProductService {
                 .bodyToMono(Product.class);
     }
     public Mono<Product> save(ProductCreateDto product) {
-        String uri = "/api/products";
         return productWebClient
-                .post().uri(uri)
+                .post().uri(API_PRODUCTS)
                 .body(Mono.just(product), ProductCreateDto.class)
                 .retrieve()
                 .onStatus(httpStatusCode -> httpStatusCode.equals(HttpStatus.BAD_REQUEST),
@@ -53,14 +53,14 @@ public class ApiProductService {
                 .bodyToMono(Product.class);
     }
     public Mono<Void> deleteById(String id) {
-        String uri = String.format("/api/products/%s", id);
+        String uri = API_PRODUCTS+"/"+id;
         return productWebClient
                 .delete().uri(uri)
                 .retrieve()
                 .bodyToMono(Void.class);
     }
     public Mono<Void> deleteAll() {
-        String uri = "/api/products/all";
+        String uri = API_PRODUCTS+"/all";
         return productWebClient
                 .delete().uri(uri)
                 .retrieve()

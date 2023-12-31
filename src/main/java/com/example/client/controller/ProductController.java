@@ -4,6 +4,7 @@ package com.example.client.controller;
 import com.example.client.dtos.Product;
 import com.example.client.dtos.ProductCreateDto;
 import com.example.client.service.ServiceProduct;
+import com.example.client.utils.ConstantsUrl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -11,7 +12,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping("/api/client" + ProductController.PRODUCT)
+@RequestMapping(ConstantsUrl.URL_BASE + ProductController.PRODUCT)
 @RequiredArgsConstructor
 public class ProductController {
     public static final String PRODUCT = "/products";
